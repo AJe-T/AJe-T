@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   const pathname = usePathname()
-  const isAuthPage = pathname === '/login' || pathname === '/signup'
+  const isAuthPage = pathname === '/signin' || pathname === '/signup'
 
   const [sidebarCollapsed, setSidebarCollapsed] = React.useState(false)
 

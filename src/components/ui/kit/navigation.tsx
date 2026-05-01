@@ -167,7 +167,13 @@ export function AvatarMenu({ user }: AvatarMenuProps) {
           <span>Settings</span>
         </DropdownMenuItem>
         <DropdownMenuSeparator className="bg-neutral-100" />
-        <DropdownMenuItem className="cursor-pointer text-danger-500 focus:bg-danger-50 focus:text-danger-700">
+        <DropdownMenuItem
+          className="cursor-pointer text-danger-500 focus:bg-danger-50 focus:text-danger-700"
+          onClick={() => {
+            document.cookie = "logisaas_auth=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT"
+            window.location.href = '/signin'
+          }}
+        >
           <LogOut className="mr-2 h-4 w-4" />
           <span>Log out</span>
         </DropdownMenuItem>
