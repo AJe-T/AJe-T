@@ -1,0 +1,162 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap');
+
+@layer base {
+  :root {
+    --color-primary-50: #f7eef7;
+    --color-primary-100: #eddbee;
+    --color-primary-200: #dbb8db;
+    --color-primary-300: #c494c4;
+    --color-primary-400: #b87bb8;
+    --color-primary-500: #a767a7;
+    --color-primary-600: #8f528f;
+    --color-primary-700: #733f73;
+    --color-primary-800: #562d56;
+    --color-primary-900: #381c38;
+
+    --color-accent-100: #fdf3e3;
+    --color-accent-400: #f0a94e;
+    --color-accent-500: #e8952e;
+
+    --color-success-100: #dcfce7;
+    --color-success-500: #22c55e;
+    --color-success-700: #15803d;
+
+    --color-warning-100: #fef9c3;
+    --color-warning-500: #f59e0b;
+    --color-warning-700: #b45309;
+
+    --color-danger-100: #fee2e2;
+    --color-danger-500: #ef4444;
+    --color-danger-700: #b91c1c;
+
+    --color-info-100: #dbeafe;
+    --color-info-500: #3b82f6;
+    --color-info-700: #1d4ed8;
+
+    --color-neutral-0: #ffffff;
+    --color-neutral-25: #faf8fa;
+    --color-neutral-50: #f4f1f4;
+    --color-neutral-100: #ebe6eb;
+    --color-neutral-200: #d6cdd6;
+    --color-neutral-300: #b8acb8;
+    --color-neutral-400: #9a8a9a;
+    --color-neutral-500: #7a6a7a;
+    --color-neutral-600: #5a4d5a;
+    --color-neutral-700: #3d333d;
+    --color-neutral-800: #261e26;
+    --color-neutral-900: #140e14;
+
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+
+    --text-xs: 11px;
+    --text-xs-lh: 16px;
+    --text-sm: 13px;
+    --text-sm-lh: 20px;
+    --text-base: 15px;
+    --text-base-lh: 24px;
+    --text-md: 16px;
+    --text-md-lh: 24px;
+    --text-lg: 18px;
+    --text-lg-lh: 28px;
+    --text-xl: 20px;
+    --text-xl-lh: 30px;
+    --text-2xl: 24px;
+    --text-2xl-lh: 32px;
+    --text-3xl: 30px;
+    --text-3xl-lh: 38px;
+    --text-4xl: 36px;
+    --text-4xl-lh: 44px;
+
+    --weight-regular: 400;
+    --weight-medium: 500;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+    --weight-extrabold: 800;
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+    --space-16: 64px;
+
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-full: 9999px;
+
+    --shadow-xs: 0 1px 2px rgba(167, 103, 167, 0.04);
+    --shadow-sm: 0 1px 3px rgba(167, 103, 167, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 4px 6px rgba(167, 103, 167, 0.07), 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px rgba(167, 103, 167, 0.10), 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 20px 25px rgba(167, 103, 167, 0.12), 0 8px 10px rgba(0, 0, 0, 0.06);
+
+    --transition-fast: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    --background: 300 33% 98%;
+    --foreground: 300 13% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 300 13% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 300 13% 10%;
+
+    --primary: 300 28% 53%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 300 44% 95%;
+    --secondary-foreground: 300 29% 35%;
+
+    --muted: 300 18% 95%;
+    --muted-foreground: 300 9% 45%;
+
+    --accent: 33 82% 54%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 300 14% 92%;
+    --input: 300 13% 82%;
+    --ring: 300 31% 68%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    box-sizing: border-box;
+  }
+  body {
+    @apply bg-neutral-25 text-neutral-600 font-sans;
+    font-family: var(--font-sans);
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-primary-200);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-primary-400);
+    border-radius: var(--radius-full);
+  }
+}
